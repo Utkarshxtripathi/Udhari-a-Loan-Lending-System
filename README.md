@@ -93,7 +93,7 @@ Swagger UI is available at [`http://localhost:8080/swagger-ui.html`](http://loca
 | PUT | `/api/admin/loans/{id}/approve` | Approve an application and create its schedule |
 | PUT | `/api/admin/loans/{id}/reject` | Reject an application with a remark |
 
-After login, send the returned JWT as `Authorization: Bearer <token>` on protected requests. The payment request body is `{"confirm":true}`. Registration expects `email`, `password`, `fullName`, `monthlyIncome`, and `employmentType`. Loan application expects `principal` and `tenureMonths`.
+After login, send the returned JWT as `Authorization: Bearer <your-jwt>` on protected requests. The payment request body is `{"confirm":true}`. Registration expects `email`, `password`, `fullName`, `monthlyIncome`, and `employmentType`. Loan application expects `principal` and `tenureMonths`.
 
 ## Data model
 
@@ -138,7 +138,7 @@ erDiagram
 
 ## Demo accounts and Postman
 
-There are no preloaded demo passwords. Set the admin credentials locally as described above, then register a borrower through the UI or `POST /api/auth/register`. The optional schema seed file creates no accounts. Do not commit passwords, JWTs, or `.env`.
+There are no preloaded demo passwords. Set the admin credentials locally as described above, then register a borrower through the UI or `POST /api/auth/register`. The schema file creates no accounts. Do not commit passwords, JWTs, or `.env`.
 
 Import [`postman/Udhari.postman_collection.json`](postman/Udhari.postman_collection.json) into Postman. Set its `baseUrl` to the app address, keep tokens and test passwords in a private local environment, register a borrower, and log in separately as borrower and admin to populate `borrowerToken` and `adminToken`. Use the returned loan and repayment IDs for dependent requests. See [`postman/README.md`](postman/README.md).
 

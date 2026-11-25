@@ -1,6 +1,6 @@
 # Local database and demo data
 
-The Spring Boot local profile can create or update the schema on startup with `spring.jpa.hibernate.ddl-auto=update`. To create it manually, run `schema.sql` in MySQL Workbench as a database administrator.
+The application creates or updates the schema on startup with `spring.jpa.hibernate.ddl-auto=update`. To create it manually, run `schema.sql` in MySQL Workbench as a database administrator.
 
 Demo accounts use passwords chosen locally; the project ships no default credentials.
 
